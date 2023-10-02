@@ -4,25 +4,38 @@ QUESTIONNAIRE!
 The following questionnaire seeks to understand your previous knowledge about some of the concepts that we will learn in class during the coming term.
 
 1. Do you know any programming languages? If you do, which ones?
+Java, Python, HTML/CSS/JavaScript, C, Ocaml 
 
 2. What is your primary computer operating system (OS)?
+Windows
 
 3. Do you own a smartphone, tablet, or mobile device? What is your favourite OS for mobile devices?
+I have an iPhone, my favourite mobile OS is iOS.
 
 4. Do you use any social networking services? If you do, which ones? Why?
+I use instagram to share about my music, and LinkedIn to learn from other professionals and career opportunities.
+
 
 5. Expand the following acronyms and do research about their meaning. You may look them up if you don't know:
 
-    HTTP
-    REST    
-    API
+    HTTP: Hypertext Transfer Protocol
+    REST: Representational State Transfer
+    API: Application Programming Interface
 
 6. Do you play a musical instrument or sing? If so, how much experience do you have?
+I play the piano, have been classically trained and participated in competitions.
+I sing and play the guitar when I have the time. 
 
 7. Can you read music notation? If so, how well?
+Yes, it takes me some time to play it on the spot though.
 
 8. How large is your personal music collection? Estimate the number of artists, albums, and songs. If instead you listen to music using streaming services, how many playlists, artists, albums, and songs do you have in your account?
+A few hundreds of songs.
+
 
 9. How do you search and find new music? How do you think this affects the types of artists that you end up listening to?
+I mostly find new music through Apple Music, Tidal and Youtube recommendations.
+
 
 10. Name two musical artists that you like. What do you find interesting about their music that makes you like them?
+I enjoy listening to David Okit and Vhoor, two completely different artists. What I like about David Okit is that he is fearlessly honest in his lyrics, sharing his faith and how it helps him in his life's experience while mixing hip-hop and congolese popular music. What I like about Vhoor is his blend of energetic and chill energies, blending Afro-Brazilian and Electronic music while collaborating with many artist.
