@@ -1,0 +1,35 @@
+body {
+    background-color: #eee8ac
+}
+
+h1 {
+    text-align: center;
+    font-family: "Sunny Spells", "Regular";
+    letter-spacing: .1rem;
+}
+
+.textBlock > p, div > ul {
+    font-family: "Mangabey", "Regular";
+    height: 50%;
+    width: 50%;
+    text-align: justify;
+    position: relative;
+    left: 25%;
+}
+
+.portrait {
+    position: relative;
+    left: 42%;
+}
+
+div > h2 {
+    font-family: "Sunny Spells", "Regular";
+    position: relative;
+    left: 25%;
+    letter-spacing: .1rem;
+}
+
+
+
+
+
