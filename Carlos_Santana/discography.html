@@ -1,7 +1,7 @@
 <!-- MENU ICON --><!DOCTYPE html>
 <html>
   <head>
-    <title>Who am I?</title>
+    <title>Discography</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -9,6 +9,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="santana.css" />
+    <style>
+      /* Hides the albums data containers */
+      #infoContainer {
+          display: none;
+      }
+  </style>
   </head>
 
   <body class="m-5">
@@ -19,155 +25,217 @@
     ></script>
 
     <!-- MENU ICON -->
-    <a id="menu-icon" 
-      href="./home.html">
-      <img src="../assets/menu.png" />
-    </a>
+    <div>
+      <a id="menu-icon" href="./home.html">
+        <img src="../assets/menu.png" />
+      </a>
+      <nav class="navbar-expand custom-navbar">
+        <div class="navbar-center container justify-content-center">
+          <ul class="menu-list list-group list-group-horizontal">
+            <li class="list-group-item col-5">
+              <a
+                class="text-decoration-none link-body-emphasis"
+                href="./biography.html"
+              >
+                BIOGRAPHY
+              </a>
+            </li>
+            <li class="list-group-item col-5">
+              <a
+                class="text-decoration-none link-body-emphasis"
+                href="./discography.html"
+              >
+                DISCOGRAPHY
+              </a>
+            </li>
+            <li class="list-group-item col-5">
+              <a
+                class="text-decoration-none link-body-emphasis"
+                href="./music.html"
+              >
+                MUSIC
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
     <h1 class="p-5">Discography</h1>
 
-    <div class="row">
-      <div class="col">
-        <div class="p-2">
-          <a
-          href="https://www.santana.com/discography/shape-shifter/"
-          class="eachAlbum"
-          title="Shape-Shifter"
-        >
-          <img
-            class= "album-cover"
-            src="https://www.santana.com/wp-content/uploads/2018/08/Shape-Shifter-320x320.jpg"
-            alt="Shape-Shifter"
-          />
-          <div class="album-icons">
-            <a
-              href="https://music.apple.com/us/album/shape-shifter/1278461868"
-            >
-              <img src="../assets/icons-itunes.png" alt="Itunes"/>
-            </a>
-            <a  href="https://open.spotify.com/album/2AQBogsDuvEPx3JQsx2o5Z?si=3re18oaxSbqPaDdpElpeew" >
-              <img src="../assets/icons-spotify.png" />
-            </a>
-            <a href="https://santana-online-store.myshopify.com/products/santana-shape-shifter-cd" >
-              <img src="../assets/icons-cd.png" />
-            </a>
-          </div>
-        </a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="p-2">
-          <a
-          href="https://www.santana.com/discography/guitar-heaven/"
-          class="eachAlbum"
-          title="Guitar Heaven"
-        >
-          <img
-            class= "album-cover"
-            src="https://www.santana.com/wp-content/uploads/2018/08/guitar-heaven-320x320.jpg"
-            alt="Guitar Heaven"
-          />
-          <div class="album-icons">
-            <a
-              href="https://music.apple.com/us/album/guitar-heaven-the-greatest-guitar-classics-of-all/457800639"
-            >
-              <img src="../assets/icons-itunes.png" alt="Itunes"/>
-            </a>
-            <a  href="https://open.spotify.com/album/4YltsTclvvB9OJbSinueLB?si=JzaAJZwHRu2Kbnyxov8llA" >
-              <img src="../assets/icons-spotify.png" />
-            </a>
-            <a href="https://www.amazon.ca/Guitar-Heaven-Greatest-Classics-Time/dp/B003TML0VO/ref=asc_df_B003TML0VO/?tag=googleshopc0c-20&linkCode=df0&hvadid=292997009494&hvpos=&hvnetw=g&hvrand=6116989902560788296&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061023&hvtargid=pla-405660700688&psc=1" >
-              <img src="../assets/icons-cd.png" />
-            </a>
-        </div>
-      </div>
+    <form class="search-bar m-5">
+      <input type="text" id="searchInput" placeholder="Search an Album Name..." />
+    </form>
+
+    <div>
+      <pre id="infoContainer" class="text-center class="textBlock"">
+      </pre>
     </div>
 
-    <div class="col">
-      <div class="p-2">
-        <a
-        href="https://www.santana.com/discography/ultimate-santana/"
-        class="eachAlbum"
-        title="Ultimate Santana"
-      >
-        <img
-          class= "album-cover"
-          src="https://www.santana.com/wp-content/uploads/2018/08/ultimate-santana-320x320.jpg"
-          alt="Ultimate Santana"
-        />
-        <div class="album-icons">
+    <div id="grid-container" class="row">
+      <div class="col">
+        <div class="p-2">
           <a
-            href="https://music.apple.com/us/album/ultimate-santana/265816081"
+            id="albumElement"
+            href="https://www.santana.com/discography/shape-shifter/"
+            class="eachAlbum"
+            title="Shape-Shifter"
           >
-            <img src="../assets/icons-itunes.png" alt="Itunes"/>
+            <img
+              class="album-cover"
+              src="https://www.santana.com/wp-content/uploads/2018/08/Shape-Shifter-320x320.jpg"
+              alt="Shape-Shifter"
+            />
+            <div class="album-icons">
+              <a
+                href="https://music.apple.com/us/album/shape-shifter/1278461868"
+              >
+                <img src="../assets/icons-itunes.png" alt="Itunes" />
+              </a>
+              <a
+                href="https://open.spotify.com/album/2AQBogsDuvEPx3JQsx2o5Z?si=3re18oaxSbqPaDdpElpeew"
+              >
+                <img src="../assets/icons-spotify.png" />
+              </a>
+              <a
+                href="https://santana-online-store.myshopify.com/products/santana-shape-shifter-cd"
+              >
+                <img src="../assets/icons-cd.png" />
+              </a>
+            </div>
           </a>
-          <a  href="https://open.spotify.com/album/6FbFvnlSfEoNhwz5MdK0Dx?si=gr2w2LgSSG-BKJbXK2SjzQ" >
-            <img src="../assets/icons-spotify.png" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-2">
+      
+          <a
+            id="albumElement"
+            href="https://www.santana.com/discography/guitar-heaven/"
+            class="eachAlbum"
+            title="Guitar Heaven"
+          >
+            <img
+              class="album-cover"
+              src="https://www.santana.com/wp-content/uploads/2018/08/guitar-heaven-320x320.jpg"
+              alt="Guitar Heaven"
+            />
+            <div class="album-icons">
+              <a
+                href="https://music.apple.com/us/album/guitar-heaven-the-greatest-guitar-classics-of-all/457800639"
+              >
+                <img src="../assets/icons-itunes.png" alt="Itunes" />
+              </a>
+              <a
+                href="https://open.spotify.com/album/4YltsTclvvB9OJbSinueLB?si=JzaAJZwHRu2Kbnyxov8llA"
+              >
+                <img src="../assets/icons-spotify.png" />
+              </a>
+              <a
+                href="https://www.amazon.ca/Guitar-Heaven-Greatest-Classics-Time/dp/B003TML0VO/ref=asc_df_B003TML0VO/?tag=googleshopc0c-20&linkCode=df0&hvadid=292997009494&hvpos=&hvnetw=g&hvrand=6116989902560788296&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061023&hvtargid=pla-405660700688&psc=1"
+              >
+                <img src="../assets/icons-cd.png" />
+              </a>
+            </div>
           </a>
-          <a href="https://www.amazon.ca/Ultimate-Santana/dp/B000UOOT1W/ref=asc_df_B000UOOT1W/?tag=googleshopc0c-20&linkCode=df0&hvadid=292982543954&hvpos=&hvnetw=g&hvrand=2322395112443637449&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061030&hvtargid=pla-451375625188&psc=1" >
-            <img src="../assets/icons-cd.png" />
+        </div>
+      </div>
+
+      <div id="grid-container" class="col">
+        <div class="p-2">
+          <a
+            href="https://www.santana.com/discography/ultimate-santana/"
+            class="eachAlbum"
+            title="Ultimate Santana"
+          >
+            <img
+              class="album-cover"
+              src="https://www.santana.com/wp-content/uploads/2018/08/ultimate-santana-320x320.jpg"
+              alt="Ultimate Santana"
+            />
+            <div class="album-icons">
+              <a
+                href="https://music.apple.com/us/album/ultimate-santana/265816081"
+              >
+                <img src="../assets/icons-itunes.png" alt="Itunes" />
+              </a>
+              <a
+                href="https://open.spotify.com/album/6FbFvnlSfEoNhwz5MdK0Dx?si=gr2w2LgSSG-BKJbXK2SjzQ"
+              >
+                <img src="../assets/icons-spotify.png" />
+              </a>
+              <a
+                href="https://www.amazon.ca/Ultimate-Santana/dp/B000UOOT1W/ref=asc_df_B000UOOT1W/?tag=googleshopc0c-20&linkCode=df0&hvadid=292982543954&hvpos=&hvnetw=g&hvrand=2322395112443637449&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061030&hvtargid=pla-451375625188&psc=1"
+              >
+                <img src="../assets/icons-cd.png" />
+              </a>
+            </div>
           </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="p-2">
+          <a
+            href="https://www.santana.com/discography/shaman/"
+            class="eachAlbum"
+            title="Shaman"
+          >
+            <img
+              class="album-cover"
+              src="https://www.santana.com/wp-content/uploads/2018/08/Shaman.jpg"
+              alt="Shaman"
+            />
+            <div class="album-icons">
+              <a href="https://music.apple.com/us/album/shaman/471861325">
+                <img src="../assets/icons-itunes.png" alt="Itunes" />
+              </a>
+              <a
+                href="https://open.spotify.com/album/5kkPOwoE9ItngbGIF6m3A4?si=i7UZ_q7kQe2mAa7JcarJ9g"
+              >
+                <img src="../assets/icons-spotify.png" />
+              </a>
+              <a
+                href="https://santana-online-store.myshopify.com/products/santana-shaman-cd"
+              >
+                <img src="../assets/icons-cd.png" />
+              </a>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="p-2">
+          <a
+            href="https://www.santana.com/discography/corazon/"
+            class="eachAlbum"
+            title="Corazón"
+          >
+            <img
+              class="album-cover"
+              src="https://www.santana.com/wp-content/uploads/2018/08/Corazon.jpg"
+              alt="Corazon"
+            />
+            <div class="album-icons">
+              <a
+                href="https://music.apple.com/us/album/coraz%C3%B3n-deluxe-version/845467840"
+              >
+                <img src="../assets/icons-itunes.png" alt="Itunes" />
+              </a>
+              <a href="https://open.spotify.com/album/5GX0IpRXgJgjR4EmOE3A0p">
+                <img src="../assets/icons-spotify.png" />
+              </a>
+              <a
+                href="https://santana-online-store.myshopify.com/products/santana-corazon-cd"
+              >
+                <img src="../assets/icons-cd.png" />
+              </a>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-
-<div class="col">
-  <div class="p-2">
-    <a
-    href="https://www.santana.com/discography/corazon/"
-    class="eachAlbum"
-    title="Corazón"
-  >
-    <img
-      class= "album-cover"
-      src="https://www.santana.com/wp-content/uploads/2018/08/Shaman.jpg"
-      alt="Corazon"
-    />
-    <div class="album-icons">
-      <a
-        href="https://music.apple.com/us/album/shaman/471861325"
-      >
-        <img src="../assets/icons-itunes.png" alt="Itunes"/>
-      </a>
-      <a  href="https://open.spotify.com/album/5kkPOwoE9ItngbGIF6m3A4?si=i7UZ_q7kQe2mAa7JcarJ9g" >
-        <img src="../assets/icons-spotify.png" />
-      </a>
-      <a href="https://santana-online-store.myshopify.com/products/santana-shaman-cd" >
-        <img src="../assets/icons-cd.png" />
-      </a>
-  </div>
-  </div>
-</div>
-
-<div class="col">
-  <div class="p-2">
-    <a
-    href="https://www.santana.com/discography/corazon/"
-    class="eachAlbum"
-    title="Corazón"
-  >
-    <img
-      class= "album-cover"
-      src="https://www.santana.com/wp-content/uploads/2018/08/Corazon.jpg"
-      alt="Corazon"
-    />
-    <div class="album-icons">
-      <a
-        href="https://music.apple.com/us/album/coraz%C3%B3n-deluxe-version/845467840"
-      >
-        <img src="../assets/icons-itunes.png" alt="Itunes"/>
-      </a>
-      <a  href="https://open.spotify.com/album/5GX0IpRXgJgjR4EmOE3A0p" >
-        <img src="../assets/icons-spotify.png" />
-      </a>
-      <a href="https://santana-online-store.myshopify.com/products/santana-corazon-cd" >
-        <img src="../assets/icons-cd.png" />
-      </a>
-  </div>
-  </div>
-</div>
-
- </div>
-</div>
+    <script src="discography.js"></script>
   </body>
 </html>
