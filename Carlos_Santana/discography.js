@@ -1,9 +1,9 @@
-// Get a reference to the search input and the info container
+// Get a references, to the search input, grid container, and info container 
 const searchInput = document.getElementById("searchInput");
 const gridContainer = document.getElementById("grid-container");
 const infoContainer = document.getElementById("infoContainer");
 
-// Sample discography data (replace with your actual data)
+// Sample discography data
 const discography = [
   {
     title: "Shape Shifter",
@@ -48,8 +48,7 @@ const discography = [
     duration: "58 minutes",
     producers: "Lester Mendez",
     label: "RCA/Sony Latin Iberia",
-  },
-  // Add more songs/albums here
+  }
 ];
 
 // Function to show information about the queried element
@@ -57,7 +56,7 @@ function showInfo(query) {
 
     gridContainer.style.display = "none";
 
-  // Find the matching song/album in the discography
+  // Find the matching album in the discography
   const matchingItem = discography.find((item) => item.title.toLowerCase() === query.toLowerCase());
 
   if (matchingItem) {
