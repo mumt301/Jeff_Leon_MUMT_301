@@ -4,6 +4,7 @@ document.getElementById('artistForm').addEventListener('submit', function(event)
     fetchReleaseGroups(userInput);
 });
 
+// Fetch Release Groups using AJAX syntax.
 function fetchReleaseGroups(artistName) {
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -21,31 +22,14 @@ function fetchReleaseGroups(artistName) {
 }
 
 function filterAndDisplayReleaseGroups(releaseGroups) {
-    const uniqueReleases = {};
+    const validReleases = releaseGroups.filter(release => release['first-release-date']);
+    const sortedReleases = validReleases.sort((a, b) => new Date(a['first-release-date']) - new Date(b['first-release-date']));
 
-    releaseGroups.forEach(release => {
-        const releaseDate = release['first-release-date'];
-        if (!(release.title in uniqueReleases) || (uniqueReleases[release.title] > releaseDate) && release.date)  {
-            uniqueReleases[release.title] = releaseDate;
-        }
-    });
-
-    const sortedReleases = Object.keys(uniqueReleases)
-    .sort((a, b) => {
-            if (uniqueReleases[a] < uniqueReleases[b] || uniqueReleases[a] === 'N/A') {
-                return -1;
-            } else if (uniqueReleases[a] > uniqueReleases[b] || uniqueReleases[b] === 'N/A') {
-                return 1;
-            } else {
-                return 0;
-            }
-        });
-
-    console.log(sortedReleases);
-    displayReleaseGroups(sortedReleases, uniqueReleases);
+    displayReleaseGroups(sortedReleases);
 }
 
-function displayReleaseGroups(releases, uniqueReleases) {
+
+function displayReleaseGroups(releases) {
     const tableBody = document.getElementById('tableData');
     tableBody.innerHTML = '';
 
@@ -53,11 +37,11 @@ function displayReleaseGroups(releases, uniqueReleases) {
         const row = document.createElement('tr');
 
         const titleCell = document.createElement('td');
-        titleCell.textContent = release;
+        titleCell.textContent = release.title;
         row.appendChild(titleCell);
 
         const dateCell = document.createElement('td');
-        dateCell.textContent = uniqueReleases[release];
+        dateCell.textContent = release['first-release-date'];
         row.appendChild(dateCell);
 
         tableBody.appendChild(row);
