@@ -43,11 +43,19 @@ table {
    
 }
 
-th, td {
-    padding: 15px;
-  }
+th {
+    padding: 8px; /* Set padding for table header cells */
+    text-align: left; /* Align text to the left in header cells */
+}
 
+td {
+    padding: 8px; /* Set padding for table data cells */
+    text-align: left; /* Align text to the left in data cells */
+}
 
+#completeForm {
+    padding-left: 25px;
+}
 
 
 

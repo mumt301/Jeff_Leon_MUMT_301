@@ -6,23 +6,27 @@
 </head>
 
 <body>
-<form id="artistForm">
-    <label for="userInput">Enter Artist Name:</label>
-    <input type="text" id="userInput">
-    <button type="submit">Search</button>
-</form>
-<script src="artist-form.js"></script>
-<div id="searchResult">
-    <table id="dataTable">
-        <thead>
-            <tr>
+<a id="menu-icon" href="../index.html">
+    <img src="../assets/menu.png">
+</a>
+
+<div id="completeForm">
+    <form id="artistForm">
+        <label for="userInput">Enter Artist Name:</label>
+        <input type="text" id="userInput">
+        <button type="submit">Search</button>
+    </form>
+    <div id="searchResult">
+        <table id="dataTable" border="1">
+            <thead>
                 <th>ALBUM NAME</th>
-                <th>RELEASE DATE</th>
-            </tr>
-        </thead>
-        <tbody id="tableData"></tbody>
-    </table>
+                <th>FIRST RELEASE DATE</th>
+            </thead>
+            <tbody id="tableData"></tbody>
+        </table>
+    </div>
 </div>
+<script src="artist-form.js"></script>
 
 </body>
 
