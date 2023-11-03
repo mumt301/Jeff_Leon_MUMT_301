@@ -38,6 +38,15 @@ div > h2 {
     letter-spacing: .1rem;
 }
 
+table {
+    border-collapse: collapse;
+   
+}
+
+th, td {
+    padding: 15px;
+  }
+
 
 
 
