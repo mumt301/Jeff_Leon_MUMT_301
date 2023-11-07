@@ -1,6 +1,20 @@
-
 body {
     background-color: #eee8ac
+}
+
+a {
+    text-decoration: none;
+}
+
+.tableButton, .clearButton {
+    color: blue;
+    position: relative;
+    right: 85px;
+}
+
+.clearButton {
+    color: black;
+    margin-left: 12px;
 }
 
 #menu-icon > img {
@@ -39,6 +53,10 @@ div > h2 {
 }
 
 table {
+    display: none;
+    margin-top: 15px;
+    position:absolute;
+    left: 30px;
     border-collapse: collapse;
    
 }

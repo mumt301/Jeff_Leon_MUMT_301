@@ -5,9 +5,15 @@
   </head>
   <body>
     <a id="menu-icon" href="../index.html">
-      <img src="../assets/menu.png">
+      <img src="../assets/menu.png" />
     </a>
-    <table border="1">
+
+    <button class="tableButton" data-target="table1">Impromtu Schubert</button>
+    <button class="tableButton" data-target="table2">Cymatics Drums</button>
+    <button class="clearButton" data-target="table2">Clear</button>
+    
+<!-- TODO: Add a the -->
+    <table id="table1" border="1">
       <tr>
         <th>File Name</th>
         <th>Compression Algorithm</th>
@@ -111,6 +117,20 @@
           </a>
         </td>
       </tr>
+    </table>
+
+    <table id="table2" border="1">
+      <tr>
+        <th>File Name</th>
+        <th>Compression Algorithm</th>
+        <th>Bit Rate</th>
+        <th>Original Size</th>
+        <th>Compressed Size</th>
+        <th>Compression ratio</th>
+        <th>Link to Original Audio</th>
+        <th>Link to Compressed Audio</th>
+        <th>Link to Residual Audio</th>
+      </tr>
       <tr>
         <td>Cymatics Drums</td>
         <td>AC3</td>
@@ -197,5 +217,6 @@
         </td>
       </tr>
     </table>
+    <script src="./compression.js"></script>
   </body>
 </html>
