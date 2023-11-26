@@ -30,9 +30,15 @@ function thereminControl(e, oscillator, theremin) {
     const therminFreqTuned = midiToFrequency(
       Math.round(frequencyToMidi(thereminFreq))
     );
+
+    const noteTuned = noteFromFrequency(therminFreqTuned,false)
+
+    tooltip.innerText = noteTuned + ", " + therminFreqTuned.toFixed(2) + " Hz";
     oscillator.frequency = therminFreqTuned;
   } else {
     console.log("Frequency: ", thereminFreq);
+    const noteDetuned = noteFromFrequency(thereminFreq,false)
+    tooltip.innerText = noteDetuned + ", " + thereminFreq.toFixed(2) + " Hz";
     oscillator.frequency = thereminFreq;
   }
 
