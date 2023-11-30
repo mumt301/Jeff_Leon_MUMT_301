@@ -1,5 +1,14 @@
 "use strict";
 
+// Instantiate a sine wave with pizzicato.js
+let oscillator = new Pizzicato.Sound({
+  source: "wave",
+  options: {
+    type: "sine",
+    frequency: 220,
+  },
+});
+
 // Turn theremin on
 function thereminOn(oscillator) {
   oscillator.play();
@@ -31,13 +40,13 @@ function thereminControl(e, oscillator, theremin) {
       Math.round(frequencyToMidi(thereminFreq))
     );
 
-    const noteTuned = noteFromFrequency(therminFreqTuned,false)
+    const noteTuned = noteFromFrequency(therminFreqTuned, false);
 
     tooltip.innerText = noteTuned + ", " + therminFreqTuned.toFixed(2) + " Hz";
     oscillator.frequency = therminFreqTuned;
   } else {
     console.log("Frequency: ", thereminFreq);
-    const noteDetuned = noteFromFrequency(thereminFreq,false)
+    const noteDetuned = noteFromFrequency(thereminFreq, false);
     tooltip.innerText = noteDetuned + ", " + thereminFreq.toFixed(2) + " Hz";
     oscillator.frequency = thereminFreq;
   }
@@ -51,29 +60,30 @@ function thereminOff(oscillator) {
   oscillator.stop();
 }
 
-function runAfterLoadingPage() {
+function getSelectedWaveform() {
+  const selectedWaveform = document.getElementById("waveformSelect").value;
+  console.log(selectedWaveform)
+  oscillator = new Pizzicato.Sound({
+    source: "wave",
+    options: {
+      type: selectedWaveform,
+      frequency: 220,
+    }});
+}
+
+function runAfterLoadingPage() {  
   // Create a tooltip element
   const tooltip = document.createElement("div");
   tooltip.id = "tooltip";
   tooltip.style.position = "absolute";
-  tooltip.style.display = "none";
   tooltip.style.backgroundColor = "#333";
   tooltip.style.color = "#fff";
   tooltip.style.padding = "5px";
   document.body.appendChild(tooltip);
 
-  // Instantiate a sine wave with pizzicato.js
-  const oscillator = new Pizzicato.Sound({
-    source: "wave",
-    options: {
-      type: "sine",
-      frequency: 220,
-    },
-  });
-
   // Get the theremin div from the html
   const theremin = document.getElementById("thereminZone");
-  const toggleCheckbox = document.getElementById("toggleCheckbox");
+  //const toggleCheckbox = document.getElementById("toggleCheckbox");
 
   // Theremin plays when the mouse enters the theremin div
   theremin.addEventListener("mouseenter", function () {

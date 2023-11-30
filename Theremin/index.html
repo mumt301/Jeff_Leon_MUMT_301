@@ -15,7 +15,6 @@
       rel="stylesheet"
     />
     <div id="tooltip" class="bubble"></div>
-    <script src="11.js" type="text/JavaScript"></script>
     <script src="11-auxiliary-functions.js" type="text/JavaScript"></script>
     <style>
       #toggle-label {
@@ -49,5 +48,16 @@
       <label id="toggle-label" for="toggleCheckbox">Auto-Tune:</label>
       <input type="checkbox" id="toggleCheckbox" />
     </div>
+
+    <script src="11.js" type="text/JavaScript"></script>
+    <label for="waveformSelect">Waveform:</label>
+    <select id="waveformSelect" onchange="getSelectedWaveform()">
+      <option index="1" value="sine">Sine</option>
+      <option index="2" value="square">Square</option>
+      <option index="3" value="triangle">Triangle</option>
+      <option index="4" value="sawtooth">Sawtooth</option>
+    </select>
+    
+    <script src="https://cdn.jsdelivr.net/npm/tone@14"></script>
   </body>
 </html>
