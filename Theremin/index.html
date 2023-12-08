@@ -52,19 +52,26 @@
     <script src="11.js" type="text/JavaScript"></script>
 
     <label for="waveformSelect">Waveform:</label>
-    <select id="waveformSelect" onchange="getSelectedWaveform()">
+    <select id="waveformSelect" onchange=getSelectedWaveform()>
       <option value="sine">Sine</option>
       <option value="square">Square</option>
       <option value="triangle">Triangle</option>
       <option value="sawtooth">Sawtooth</option>
     </select>
 
-    <label id="fx-label" for="soundSelect">Effects Selection:</label>
+    <label id="fx-label" for="effectsSelect">Effects Selection:</label>
     <input type="checkbox" id="fxCheckbox" />
-    <select id="effectsSelect" onchange="getSelectedInstrument()">
+    <select id="effectsSelect">
       <option value="reverb">Reverb</option>
       <option value="delay">Delay</option>
       <option value="flanger">Flanger</option>
+    </select>
+
+    <label id="sound-label" for="soundSelect">Sound Selection:</label>
+    <input type="checkbox" id="soundCheckbox" />
+    <select id="soundSelect" onchange="loadSounds()">
+      <option value="orchestra">Orchestra</option>
+      <option value="anxious">Anxious</option>
     </select>
 
     <script src="11.js" type="text/JavaScript"></script>

@@ -20,16 +20,6 @@ function interval(frequency, semitones) {
     return frequency * Math.pow(2, semitones / 12);
 }
 
-function midiToFrequency(midinumber, concertA = 440) {
-    // converts a MIDI note number into its equivalent frequency.
-    const A4 = 69
-    if (midinumber === A4) {
-        return concertA;
-    }
-    let semitones = midinumber - A4;
-    return interval(440, semitones);
-}
-
 function frequencyToMidi(frequency){
     // converts a frequency into its equivalent MIDI note number.
     let midinumber = (( 12 * Math.log(frequency / 220.0) / Math.log(2.0)) + 57.001 );
